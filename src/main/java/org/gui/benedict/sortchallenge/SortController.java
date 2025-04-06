@@ -36,4 +36,9 @@ public class SortController {
         numbersTable.setItems(sortedList);
     }
 
+    public void selection(){
+        ObservableList<Integer> sortedList = FXCollections.observableArrayList(SelectionSort.selectionSort());
+        numbersTable.setItems(sortedList);
+    }
+
 }
