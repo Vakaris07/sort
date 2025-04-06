@@ -22,6 +22,8 @@ public class SortController {
     @FXML
     public TextField searchField;
     private static ObservableList<Integer> data;
+    @FXML
+    public Label index_label;
 
     public void initialize(){
         data = FXCollections.observableArrayList(5,15,4,9,47,12,13,17,89,76,2);
@@ -31,14 +33,21 @@ public class SortController {
     public static ObservableList<Integer> getNumbers(){
         return data;
     }
+    @FXML
     public void bubble(){
         ObservableList<Integer> sortedList = FXCollections.observableArrayList(BubbleSort.bubbleSort());
         numbersTable.setItems(sortedList);
     }
-
+    @FXML
     public void selection(){
         ObservableList<Integer> sortedList = FXCollections.observableArrayList(SelectionSort.selectionSort());
         numbersTable.setItems(sortedList);
+    }
+    @FXML
+    public void binary(){
+        ObservableList<Integer> sortedList = FXCollections.observableArrayList(SelectionSort.selectionSort());
+        numbersTable.setItems(sortedList);
+        index_label.setText(BinarySearch.binarySearch(Integer.parseInt(searchField.getText())));
     }
 
 }

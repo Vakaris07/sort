@@ -17,7 +17,7 @@
           <TableColumn fx:id="numbersColumns" prefWidth="75.0" text="Numbers" />
         </columns>
       </TableView>
-      <Button fx:id="applyButton" layoutX="412.0" layoutY="152.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="152.0" text="Apply" />
+      <Button fx:id="applyButton" layoutX="412.0" layoutY="152.0" mnemonicParsing="false" onAction="#binary" prefHeight="96.0" prefWidth="152.0" text="Apply" />
       <RadioButton fx:id="burbleSortSelection" layoutX="29.0" layoutY="356.0" mnemonicParsing="false" onAction="#bubble" prefHeight="17.0" prefWidth="87.0" text="Burble sort">
          <toggleGroup>
             <ToggleGroup fx:id="button_group" />
@@ -28,6 +28,11 @@
       <Label layoutX="217.0" layoutY="20.0" prefHeight="32.0" prefWidth="171.0" text="Test algo">
          <font>
             <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="index_label" layoutX="412.0" layoutY="306.0" text="Label">
+         <font>
+            <Font size="25.0" />
          </font>
       </Label>
    </children>

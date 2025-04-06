@@ -10,7 +10,7 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("MainWindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 750, 440);
         stage.setTitle("Algo tester");
         stage.setScene(scene);
         stage.show();
