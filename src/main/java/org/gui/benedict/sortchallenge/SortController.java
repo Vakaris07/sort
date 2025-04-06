@@ -21,11 +21,19 @@ public class SortController {
     public RadioButton binarySearchSelection;
     @FXML
     public TextField searchField;
-    private ObservableList<Integer> data;
+    private static ObservableList<Integer> data;
 
     public void initialize(){
         data = FXCollections.observableArrayList(5,15,4,9,47,12,13,17,89,76,2);
         numbersTable.setItems(data);
         numbersColumns.setCellValueFactory(cellData-> new javafx.beans.property.SimpleObjectProperty<>(cellData.getValue()));
     }
+    public static ObservableList<Integer> getNumbers(){
+        return data;
+    }
+    public void bubble(){
+        ObservableList<Integer> sortedList = FXCollections.observableArrayList(BubbleSort.bubbleSort());
+        numbersTable.setItems(sortedList);
+    }
+
 }
